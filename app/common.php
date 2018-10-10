@@ -11,3 +11,4 @@ require 'models/Client.php';
 require 'models/Sensor.php';
 require 'models/Site.php';
 require 'models/Turbine.php';
+require 'models/TurbineDeployed.php'
