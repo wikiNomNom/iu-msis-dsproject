@@ -7,7 +7,7 @@ class Turbine{
   public $turbineDescription;
   public $capacity;
   public $rampUpTime;
-  public $maintenaceInterval;
+  public $maintenanceInterval;
 
   public function __construct($row) {
     $this->turbineId = intval($row['turbineId']);
@@ -17,7 +17,7 @@ class Turbine{
 
     $this->capacity = intval($row['capacity']);
     $this->rampUpTime = intval($row['rampUpTime']);
-    $this->maintenaceInterval = intval($row['maintenaceInterval']);
+    $this->maintenanceInterval = intval($row['maintenanceInterval']);
   }
 
   public static function getAllTurbines() {
