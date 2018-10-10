@@ -10,7 +10,7 @@ class Note{
     $this->noteId = intval($row['noteId']);
     $this->clientId = intval($row['clientId']);
 
-    $this->clientDescription = $row['clientDescription'];
+    $this->noteDescription = $row['noteDescription'];
   }
 
   //TODO add create method for POST
