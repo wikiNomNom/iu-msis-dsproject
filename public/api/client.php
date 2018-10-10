@@ -4,7 +4,7 @@ require '../../app/common.php';
 
 
 // 1. Go to the database and get all work associated with the $taskId
-$clientArr = Work::getAllClients();
+$clientArr = Client::getAllClients();
 
 // 2. Convert to JSON
 $json = json_encode($clientArr, JSON_PRETTY_PRINT);
