@@ -7,7 +7,7 @@ require '../../app/common.php';
 $tubrineArr = Turbine::getAllTurbines();
 
 // 2. Convert to JSON
-$json = json_encode($turbArr, JSON_PRETTY_PRINT);
+$json = json_encode($turbineArr, JSON_PRETTY_PRINT);
 
 // 3. Print
 header('Content-Type: application/json');
