@@ -14,3 +14,5 @@ require 'models/Turbine.php';
 require 'models/TurbineDeployed.php';
 require 'models/SensorDeployed.php';
 require 'models/SensorTimeSeries.php';
+
+require 'models/Note.php';
