@@ -14,7 +14,7 @@ class Sensor{
     $this->sensorName = $row['sensorName'];
     $this->sensorDescription = $row['sensorDescription'];
     $this->manufacturer = $row['manufacturer'];
-    $this->totalLifeExpentancyHours = $row['totalLifeExpentancyHours'];
+    $this->totalLifeExpentancyHours = intval($row['totalLifeExpentancyHours']);
   }
 
   public static function getAllSensors() {
