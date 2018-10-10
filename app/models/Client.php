@@ -19,7 +19,7 @@ class Client{
     $this->headquarters = $row['headquarters'];
   }
 
-  public static function getAllClients($clientId) {
+  public static function getAllClients() {
     // 1. Connect to the database
     $db = new PDO(DB_SERVER, DB_USER, DB_PW);
 
