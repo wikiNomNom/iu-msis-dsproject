@@ -13,7 +13,25 @@ class Note{
     $this->noteDescription = $row['noteDescription'];
   }
 
-  //TODO add create method for POST
+  public function create(){
+      $db = new PDO(DB_SERVER, DB_USER, DB_PW);
+
+      $sql = 'INSERT notes(clientId, noteDescription) VALUES (?, ?)';
+
+      $statement = $db->prepare($sql);
+
+      $success = $statement->execute([
+        $this->clientId,
+        $this->noteDescription
+        ]);
+
+      $this->noteId = $db->lastInsertId();
+
+      if(!$success){
+        die("errorrr");
+      }
+      
+    }
 
   public static function getAllNotes() {
     // 1. Connect to the database
