@@ -18,7 +18,7 @@ class SensorTimeSeries{
 
     $this->dataCollectedDate = $row['dataCollectedDate'];
 
-    $this->output = doubleval($row['clientDescription']);
+    $this->output = doubleval($row['output']);
     $this->heatRate = doubleval($row['heatRate']);
     $this->compressorEfficiency = doubleval($row['compressorEfficiency']);
     $this->availability = doubleval($row['availability']);
