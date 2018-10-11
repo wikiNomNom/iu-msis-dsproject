@@ -19,7 +19,8 @@ class Note{
       $sql = 'INSERT notes(clientId, noteDescription) VALUES (?, ?)';
 
       $statement = $db->prepare($sql);
-
+      echo $this->clientId;
+      echo $this->noteDescription; 
       $success = $statement->execute([
         $this->clientId,
         $this->noteDescription
