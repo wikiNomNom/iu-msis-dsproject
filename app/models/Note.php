@@ -7,7 +7,7 @@ class Note{
   public $noteDescription;
 
   public function __construct($row) {
-    $this->noteId = intval($row['noteId']);
+    
     $this->clientId = intval($row['clientId']);
 
     $this->noteDescription = $row['noteDescription'];
