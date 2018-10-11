@@ -7,8 +7,8 @@ class Note{
   public $noteDescription;
 
   public function __construct($row) {
-    $this->id = isset($row['id']) ? intval($row['id']) : null;
-    
+    $this->noteId = isset($row['noteId']) ? intval($row['noteId']) : null;
+
     $this->clientId = intval($row['clientId']);
 
     $this->noteDescription = $row['noteDescription'];
