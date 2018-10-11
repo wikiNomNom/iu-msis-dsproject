@@ -7,7 +7,7 @@ class Note{
   public $noteDescription;
 
   public function __construct($row) {
-
+    $this->noteId = intval($row['noteId']);
     $this->clientId = intval($row['clientId']);
 
     $this->noteDescription = $row['noteDescription'];
@@ -19,7 +19,7 @@ class Note{
       $sql = 'INSERT notes(clientId, noteDescription) VALUES (?, ?)';
 
       $statement = $db->prepare($sql);
-      
+
       $success = $statement->execute([
         $this->clientId,
         $this->noteDescription
