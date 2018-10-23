@@ -19,7 +19,12 @@ var clientApp = new Vue ({
         console.log('COMMENT FETCH ERROR:');
         console.log(err);
         }) ;//end of catch
-      }//end of fetchClient
+      },//end of fetchClient
+
+    gotoSite(clientId) {
+      //TODO change turbine page to site page
+      window.location = 'turbine.html';
+    }
 
     },//methods closed
 
