@@ -23,7 +23,7 @@
         </div>
   		</header>
 
-      <div class="container" id="">
+      <div class="container" id="siteData">
         <table class="table">
 
           <thead class="text-success">
@@ -33,8 +33,21 @@
               <th scope="col">Primary Contact</th>
               <th scope="col">Capacity</th>
               <th scope="col">Commercial Date</th>
+              <th scope="col">State</th>
+              <th scope="col">Country</th>
             </tr>
           </thead>
+          <tbody>
+            <tr v-for="s in sites" :key="s.siteId" @click="gotoTurbine(s.siteId)">
+              <td>{{ s.siteId }}</td>
+              <td>{{ s.siteName }}</td>
+              <td>{{ s.primaryContact }}</td>
+              <td>{{ s.capacity }}</td>
+              <td>{{ s.commercialDate }}</td>
+              <td>{{ s.addrState }}</td>
+              <td>{{ s.addrCountry }}</td>
+            </tr>
+          </tbody>
 
         </table>
       </div>
@@ -47,7 +60,7 @@
     <!-- include javascript files-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <!-- TODO put in javascript link -->
+    <script src="js/site.app.js"></script>
 
   </body>
 </html>

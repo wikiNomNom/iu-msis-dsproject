@@ -23,12 +23,13 @@ var clientApp = new Vue ({
 
     gotoSite(clientId) {
       //TODO change turbine page to site page
-      window.location = 'turbine.html';
+      window.location = 'site.html';
     }
 
     },//methods closed
 
     created() {
+        //TODO get parameters from url
         this.fetchClient();
     }//created closed
 });
