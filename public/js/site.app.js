@@ -19,12 +19,12 @@ var siteApp = new Vue ({
         console.log('COMMENT FETCH ERROR:');
         console.log(err);
         }) ;//end of catch
-      }//end of fetchSite
+      },//end of fetchSite
 
-    // gotoSite(clientId) {
-    //   //TODO change turbine page to site page
-    //   window.location = 'turbine.html';
-    // }
+    gotoTurbine(siteId) {
+      //TODO change turbine page to site page
+      window.location = 'turbine.html';
+    }
 
     },//methods closed
 
