@@ -87,13 +87,13 @@
               <th scope="col">Sub Industry</th>
             </tr>
           </thead>
-          <tbody id="clientTable">
+          <tbody id="clientTable" class="tableHover">
             <tr v-for="c in clients" :key="c.clientId" @click="gotoSite(c.clientId)">
-              <td class="tableHover">{{ c.clientId }}</td>
-              <td class="tableHover">{{ c.clientName }}</td>
-              <td class="tableHover">{{ c.headquarters }}</td>
-              <td class="tableHover">{{ c.gicsSector }}</td>
-              <td class="tableHover">{{ c.gicsSubIndustry }}</td>
+              <td>{{ c.clientId }}</td>
+              <td>{{ c.clientName }}</td>
+              <td>{{ c.headquarters }}</td>
+              <td>{{ c.gicsSector }}</td>
+              <td>{{ c.gicsSubIndustry }}</td>
             </tr>
             <!-- <tr>
               <th scope="row">1</th>

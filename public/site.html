@@ -37,15 +37,15 @@
               <th scope="col">Country</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody class="tableHover">
             <tr v-for="s in sites" :key="s.siteId" @click="gotoTurbine(s.siteId)">
-              <td class="tableHover">{{ s.siteId }}</td>
-              <td class="tableHover">{{ s.siteName }}</td>
-              <td class="tableHover">{{ s.primaryContact }}</td>
-              <td class="tableHover">{{ s.capacity }}</td>
-              <td class="tableHover">{{ s.commercialDate }}</td>
-              <td class="tableHover">{{ s.addrState }}</td>
-              <td class="tableHover">{{ s.addrCountry }}</td>
+              <td>{{ s.siteId }}</td>
+              <td>{{ s.siteName }}</td>
+              <td>{{ s.primaryContact }}</td>
+              <td>{{ s.capacity }}</td>
+              <td>{{ s.commercialDate }}</td>
+              <td>{{ s.addrState }}</td>
+              <td>{{ s.addrCountry }}</td>
             </tr>
           </tbody>
 

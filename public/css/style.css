@@ -41,6 +41,6 @@ nav{
 	margin-bottom: 20px;
 }
 
-.tableHover{
+.tableHover td {
 	cursor: pointer;
 }
