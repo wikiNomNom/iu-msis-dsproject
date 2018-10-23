@@ -76,7 +76,7 @@
       </div> -->
 
       <div class="container" id="clientData">
-        <table class="table tableHover">
+        <table class="table">
 
           <thead class="text-success">
             <tr>
@@ -89,11 +89,11 @@
           </thead>
           <tbody id="clientTable">
             <tr v-for="c in clients" :key="c.clientId" @click="gotoSite(c.clientId)">
-              <td>{{ c.clientId }}</td>
-              <td>{{ c.clientName }}</td>
-              <td>{{ c.headquarters }}</td>
-              <td>{{ c.gicsSector }}</td>
-              <td>{{ c.gicsSubIndustry }}</td>
+              <td class="tableHover">{{ c.clientId }}</td>
+              <td class="tableHover">{{ c.clientName }}</td>
+              <td class="tableHover">{{ c.headquarters }}</td>
+              <td class="tableHover">{{ c.gicsSector }}</td>
+              <td class="tableHover">{{ c.gicsSubIndustry }}</td>
             </tr>
             <!-- <tr>
               <th scope="row">1</th>

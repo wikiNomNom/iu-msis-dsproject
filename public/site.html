@@ -24,7 +24,7 @@
   		</header>
 
       <div class="container" id="siteData">
-        <table class="table tableHover">
+        <table class="table">
 
           <thead class="text-success">
             <tr>
@@ -39,13 +39,13 @@
           </thead>
           <tbody>
             <tr v-for="s in sites" :key="s.siteId" @click="gotoTurbine(s.siteId)">
-              <td>{{ s.siteId }}</td>
-              <td>{{ s.siteName }}</td>
-              <td>{{ s.primaryContact }}</td>
-              <td>{{ s.capacity }}</td>
-              <td>{{ s.commercialDate }}</td>
-              <td>{{ s.addrState }}</td>
-              <td>{{ s.addrCountry }}</td>
+              <td class="tableHover">{{ s.siteId }}</td>
+              <td class="tableHover">{{ s.siteName }}</td>
+              <td class="tableHover">{{ s.primaryContact }}</td>
+              <td class="tableHover">{{ s.capacity }}</td>
+              <td class="tableHover">{{ s.commercialDate }}</td>
+              <td class="tableHover">{{ s.addrState }}</td>
+              <td class="tableHover">{{ s.addrCountry }}</td>
             </tr>
           </tbody>
 
