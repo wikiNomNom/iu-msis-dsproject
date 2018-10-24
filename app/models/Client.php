@@ -41,7 +41,6 @@ class Client{
     }
 
     return $arr;
-  }
-
+  }// getAllClients
 
 }

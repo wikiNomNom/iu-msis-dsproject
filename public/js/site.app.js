@@ -9,9 +9,9 @@ var siteApp = new Vue ({
 
   methods: {
 
-    fetchSite : function (){
+    fetchSite : function (cId){
 
-      fetch('api/site.php')
+      fetch('api/site.php?clientId='+cId)
       .then( function(response) {return response.json()} )
       .then( json => {siteApp.sites = json} )
 
@@ -30,6 +30,8 @@ var siteApp = new Vue ({
 
     created() {
         //TODO get parameters from url
-        this.fetchSite();
+        const url = new URL(window.location.href);
+        const clientId = url.searchParams.get('clientId');
+        this.fetchSite(clientId);
     }//created closed
 });

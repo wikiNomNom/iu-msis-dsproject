@@ -23,7 +23,7 @@ var clientApp = new Vue ({
 
     gotoSite(clientId) {
       //TODO change turbine page to site page
-      window.location = 'site.html';
+      window.location = 'site.html?clientId=' + clientId;
     }
 
     },//methods closed
