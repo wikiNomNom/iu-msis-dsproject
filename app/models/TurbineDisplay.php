@@ -23,6 +23,7 @@ class TurbineDisplay{
 
     $this->siteId = intval($row['siteId']);
     $this->capacity = intval($row['capacity']);
+    $this->rampUpTime = intval($row['rampUpTime']);
     $this->maintenanceInterval = intval($row['maintenanceInterval']);
 
     $this->serialNumber = $row['serialNumber'];
