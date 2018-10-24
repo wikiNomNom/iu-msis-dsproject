@@ -47,7 +47,7 @@ class TurbineDisplay{
             td.totalStarts as totalStarts, td.lastPlannedOutageDate as lastPlannedOutageDate, td.lastUnplannedOutageDate as lastUnplannedOutageDate
       		 FROM Turbine as t, TurbineDeployed as td
             WHERE t.turbineId = td.turbineId
-            AND td.siteId = ?';
+            AND td.siteId = ?;';
 
     $statement = $db->prepare($sql);
 
