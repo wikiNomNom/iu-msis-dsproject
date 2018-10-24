@@ -62,7 +62,7 @@ class TurbineDisplay{
     $arr = [];
     while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
       // 4.a. For each row, make a new work object
-      $echo "making row";
+      echo "making row";
       $turbineDisplayItem =  new TurbineDisplay($row);
 
       array_push($arr, $turbineDisplayItem);
