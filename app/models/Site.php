@@ -78,9 +78,9 @@ class Site{
     $arr = [];
     while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
       // 4.a. For each row, make a new work object
-      $clientItem =  new Client($row);
+      $siteItem =  new Site($row);
 
-      array_push($arr, $clientItem);
+      array_push($arr, $siteItem);
     }
 
     return $arr;
