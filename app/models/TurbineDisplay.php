@@ -53,8 +53,7 @@ class TurbineDisplay{
       [$siteId]
     );
 
-    echo $success;
-
+    
     // 4. Handle the results
     $arr = [];
     while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
