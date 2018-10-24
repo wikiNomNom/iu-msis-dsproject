@@ -4,7 +4,7 @@ require '../../app/common.php';
 
 
 // 1. Go to the database and get all work associated with the $taskId
-$turbineDisplayArr = TurbineDisplay::getTurbineBySiteId();
+$turbineDisplayArr = TurbineDisplay::getTurbineBySiteId($siteId);
 
 // 2. Convert to JSON
 $json = json_encode($turbineDisplArr, JSON_PRETTY_PRINT);
