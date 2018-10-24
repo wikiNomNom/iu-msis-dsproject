@@ -42,7 +42,6 @@ class Turbine{
     }
 
     return $arr;
-  }
-
+  }//getAllTurbines
 
 }

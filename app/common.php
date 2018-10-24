@@ -20,3 +20,4 @@ require 'models/TurbineDeployed.php';
 require 'models/SensorDeployed.php';
 require 'models/SensorTimeSeries.php';
 require 'models/Note.php';
+require 'models/TurbineDisplay.php';

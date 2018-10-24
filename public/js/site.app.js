@@ -23,7 +23,7 @@ var siteApp = new Vue ({
 
     gotoTurbine(siteId) {
       //TODO change turbine page to site page
-      window.location = 'turbine.html';
+      window.location = 'turbine.html?turbineId=' + turbineId;
     }
 
     },//methods closed
