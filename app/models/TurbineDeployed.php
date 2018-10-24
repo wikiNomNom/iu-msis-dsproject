@@ -49,7 +49,7 @@ class TurbineDeployed{
     }
 
     return $arr;
-  }
+  }//getAllTurbineDeployed
 
 
 }
