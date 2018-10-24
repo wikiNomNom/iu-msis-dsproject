@@ -53,7 +53,7 @@ class TurbineDisplay{
       [$siteId]
     );
 
-    echo $success
+    echo $success;
 
     // 4. Handle the results
     $arr = [];
