@@ -12,6 +12,7 @@ var turbineApp = new Vue ({
     fetchTurbine : function (sId){
 
       fetch('api/TurbineDisplay.php?siteId='+sId)
+      console.log("inside fetchTurbine");
       .then( function(response) {return response.json()} )
       .then( json => {turbineApp.turbines = json} )
 
@@ -22,7 +23,6 @@ var turbineApp = new Vue ({
       },//end of fetchClient
 
     gotoSensor(turbineId) {
-      //TODO change turbine page to site page
       window.location = 'sensor.html?sensorId=' + sensorId;
     }
 
