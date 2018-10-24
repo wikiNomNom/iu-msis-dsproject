@@ -22,7 +22,7 @@ var turbineApp = new Vue ({
       },//end of fetchClient
 
     gotoSensor(turbineId) {
-      window.location = 'sensor.html?sensorId=' + sensorId;
+      window.location = 'sensor.html?turbineId=' + turbineId;
     }
 
     },//methods closed
