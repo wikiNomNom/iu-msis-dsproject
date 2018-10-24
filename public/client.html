@@ -22,7 +22,9 @@
     			<h1 style="display: inline;">Turbine Management Portal</h1>
         </div>
   		</header>
-
+      <h2>
+        Site Info
+      </h2>
       <!-- <nav>
         <ul class="nav">
           <li class="nav-item">
@@ -87,7 +89,7 @@
               <th scope="col">Sub Industry</th>
             </tr>
           </thead>
-          <tbody id="clientTable" class="tableHover">
+          <tbody id="clientTable">
             <tr v-for="c in clients" :key="c.clientId" @click="gotoSite(c.clientId)">
               <td>{{ c.clientId }}</td>
               <td>{{ c.clientName }}</td>
