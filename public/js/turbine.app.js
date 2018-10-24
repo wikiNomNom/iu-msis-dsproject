@@ -21,9 +21,9 @@ var turbineApp = new Vue ({
         }) ;//end of catch
       },//end of fetchClient
 
-    gotoSensor(turbineId) {
-      window.location = 'sensor.html?turbineId=' + turbineId;
-    }
+    // gotoSensor(turbineId) {
+    //   window.location = 'sensor.html?turbineId=' + turbineId;
+    // }
 
     },//methods closed
 

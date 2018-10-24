@@ -45,7 +45,7 @@
         </div>
 
         <div class="afterChart">
-          <ul class="list-group">
+          <ul class="list-group" v-for="t in turbines">
             <li class="list-group-item">Turbine #: {{ t.turbineId }}</li>
             <li class="list-group-item">Turbine Name: {{ t.turbineName }}</li>
             <li class="list-group-item">Serial #: {{ t.serialNumber }}</li>
