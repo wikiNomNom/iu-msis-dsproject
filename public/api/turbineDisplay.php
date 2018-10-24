@@ -2,12 +2,13 @@
 
 require '../../app/common.php';
 
+$siteId = intval($_GET['siteId'] ?? 0);
 
 // 1. Go to the database and get all work associated with the $taskId
 $turbineDisplayArr = TurbineDisplay::getTurbineBySiteId($siteId);
 
 // 2. Convert to JSON
-$json = json_encode($turbineDisplArr, JSON_PRETTY_PRINT);
+$json = json_encode($turbineDisplayArr, JSON_PRETTY_PRINT);
 
 // 3. Print
 header('Content-Type: application/json');
