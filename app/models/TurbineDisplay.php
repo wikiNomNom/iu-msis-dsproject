@@ -45,7 +45,7 @@ class TurbineDisplay{
 		        td.serialNumber as serialNumber, td.deployedDate as deployedDate, td.totalFiredHours as totalFiredHours,
             td.totalStarts as totalStarts, td.lastPlannedOutageDate as lastPlannedOutageDate, td.lastUnplannedOutageDate as lastUnplannedOutageDate
       		 FROM Turbine as t, TurbineDeployed as td
-            WHERE (t.turbineId = td.turbineDeployedId)
+            WHERE (t.turbineId = td.turbineId)
             AND (td.siteId = ?)';
 
     $statement = $db->prepare($sql);
