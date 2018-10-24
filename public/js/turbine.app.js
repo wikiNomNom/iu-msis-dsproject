@@ -11,7 +11,7 @@ var turbineApp = new Vue ({
 
     fetchTurbine : function (sId){
 
-      fetch('api/TurbineDisplay.php?siteId='+sId)
+      fetch('api/turbineDisplay.php?siteId='+sId)
       .then( function(response) {return response.json()} )
       .then( json => {turbineApp.turbines = json} )
 
