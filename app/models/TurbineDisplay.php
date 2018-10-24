@@ -17,8 +17,8 @@ class TurbineDisplay{
   public $lastUnplannedOutageDate;
 
   public function __construct($row) {
-    $this->turbineId = intval($row['turbineId']);
-    $this->turbineName = $row['turbineId'];
+    $this->turbineId = intval($row['td.turbineId']);
+    $this->turbineName = $row['t.turbineName'];
     $this->turbineDescription = $row['turbineDescription'];
 
     $this->siteId = intval($row['siteId']);
