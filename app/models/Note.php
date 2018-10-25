@@ -28,10 +28,6 @@ class Note{
 
       $this->noteId = $db->lastInsertId();
 
-      // if(!$success){
-      //   die("errorrr");
-      // }
-
     }
 
   public static function getAllNotes($clientId) {

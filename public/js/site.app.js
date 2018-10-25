@@ -5,7 +5,8 @@ var siteApp = new Vue ({
   data: {
 
       sites: [],
-      notes: []
+      notes: [],
+      newNoteForm: {}
   },
 
   methods: {
@@ -33,6 +34,39 @@ var siteApp = new Vue ({
           }) ;//end of catch
       },//fetchNote ends
 
+      getEmptyNoteForm() {
+        console.log("Inside getEmptyNoteForm");
+      return {
+        clientId: null,
+        noteDescription: null
+      }
+    },
+
+      postNote : function(e){
+      // console.log('inside postComment.');
+        fetch('api/note.php', {
+          method : "POST",
+          body : JSON.stringify(
+              {clientId: this.newNoteForm.clientId,
+              noteDescription: this.newNoteForm.noteDescription}
+            ), //end stringify
+          headers: {
+            'Content-type' : 'application/json; charset=utf-8'
+          }// end headers
+        })//end fetch
+
+        .then( response => response.json() )
+        .then(
+          json => {this.comment.push(json);}
+        )
+        .then(window.location.reload())
+
+        .catch(function (err) {
+          console.log(('COMMENT POST ERROR: '));
+          console.log(err);
+        });
+     }, //end postNote
+
     gotoTurbine(siteId) {
       //TODO change turbine page to site page
       window.location = 'turbine.html?siteId=' + siteId;
@@ -47,5 +81,6 @@ var siteApp = new Vue ({
         console.log("At created"+clientId);
         this.fetchSite(clientId);
         this.fetchNote(clientId);
+        this.newNoteForm = this.getEmptyNoteForm();
     }//created closed
 });
