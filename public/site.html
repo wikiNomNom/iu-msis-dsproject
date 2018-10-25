@@ -60,11 +60,11 @@
               <th scope="col">Comment</th>
             </tr>
           </thead>
-          <tbody  v-for="s in sites">
+          <tbody  v-for="n in notes">
             <tr>
-              <td>{{ s.noteId }}</td>
-              <td>{{ s.clientId }}</td>
-              <td>{{ s.noteDescription }}</td>
+              <td>{{ n.noteId }}</td>
+              <td>{{ n.clientId }}</td>
+              <td>{{ n.noteDescription }}</td>
             </tr>
           </tbody>
         </table>
