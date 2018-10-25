@@ -44,17 +44,19 @@
           Chart space
         </div>
 
-        <div class="afterChart">
-          <ul class="list-group" v-for="t in turbines">
-            <li class="list-group-item">Turbine #: {{ t.turbineId }}</li>
-            <li class="list-group-item">Turbine Name: {{ t.turbineName }}</li>
-            <li class="list-group-item">Serial #: {{ t.serialNumber }}</li>
-            <li class="list-group-item">Deployed Date: {{ t.deployedDate }} </li>
-            <li class="list-group-item">Total Starts: {{ t.totalStarts }}</li>
-            <li class="list-group-item">Total Fired Hours: {{ t.totalFiredHours }}</li>
-            <li class="list-group-item">Last Planned Outage: {{ t.lastPlannedOutageDate }} </li>
-            <li class="list-group-item">Last Unplanned Outage: {{ t.lastUnplannedOutageDate }}</li>
-          </ul>
+        <div class="afterChart" v-for="t in turbines">
+          <div>
+            <ul class="list-group">
+              <li class="list-group-item">Turbine #: {{ t.turbineId }}</li>
+              <li class="list-group-item">Turbine Name: {{ t.turbineName }}</li>
+              <li class="list-group-item">Serial #: {{ t.serialNumber }}</li>
+              <li class="list-group-item">Deployed Date: {{ t.deployedDate }} </li>
+              <li class="list-group-item">Total Starts: {{ t.totalStarts }}</li>
+              <li class="list-group-item">Total Fired Hours: {{ t.totalFiredHours }}</li>
+              <li class="list-group-item">Last Planned Outage: {{ t.lastPlannedOutageDate }} </li>
+              <li class="list-group-item">Last Unplanned Outage: {{ t.lastUnplannedOutageDate }}</li>
+            </ul>
+          </div>
         </div>
 
       </div>
