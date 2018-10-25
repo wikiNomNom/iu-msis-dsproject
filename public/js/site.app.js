@@ -14,7 +14,7 @@ var siteApp = new Vue ({
       console.log("At function"+cId);
       fetch('http://ec2-34-222-125-25.us-west-2.compute.amazonaws.com/api/site.php?clientId='+cId)
       .then( function(response) {return response.json()} )
-      .then( json => {this.sites = json} )
+      .then( json => {siteApp.sites = json} )
 
       .catch(function(err){
         console.log('COMMENT FETCH ERROR:');
@@ -25,7 +25,7 @@ var siteApp = new Vue ({
       fetchNote : function(cId){
         fetch('api/note.php?clientId='+cId)
         .then( function(response) {return response.json()} )
-        .then( json => {this.notes = json} )
+        .then( json => {siteApp.notes = json} )
 
         .catch(function(err){
           console.log('COMMENT FETCH ERROR:');
