@@ -47,7 +47,7 @@ var siteApp = new Vue ({
         fetch('api/note.php', {
           method : "POST",
           body : JSON.stringify(
-              {clientId: this.newNoteForm.clientId,
+              {clientId: this.cid,
               noteDescription: this.newNoteForm.noteDescription}
             ), //end stringify
           headers: {
@@ -82,5 +82,6 @@ var siteApp = new Vue ({
         this.fetchSite(clientId);
         this.fetchNote(clientId);
         this.newNoteForm = this.getEmptyNoteForm();
+        this.cid = clientId;
     }//created closed
 });
