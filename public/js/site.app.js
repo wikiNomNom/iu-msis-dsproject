@@ -4,7 +4,8 @@ var siteApp = new Vue ({
 
   data: {
 
-      sites: []
+      sites: [],
+      notes: []
   },
 
   methods: {
@@ -24,7 +25,7 @@ var siteApp = new Vue ({
       fetchNote : function(cId){
         fetch('api/note.php?clientId='+cId)
         .then( function(response) {return response.json()} )
-        .then( json => {this.sites = json} )
+        .then( json => {this.notes = json} )
 
         .catch(function(err){
           console.log('COMMENT FETCH ERROR:');
