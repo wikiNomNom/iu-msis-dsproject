@@ -34,17 +34,19 @@ class Note{
 
     }
 
-  public static function getAllNotes() {
+  public static function getAllNotes($clientId) {
     // 1. Connect to the database
     $db = new PDO(DB_SERVER, DB_USER, DB_PW);
 
     // 2. Prepare the query
-    $sql = 'SELECT * FROM notes';
+    $sql = 'SELECT * FROM notes where clientId = ?;';
 
     $statement = $db->prepare($sql);
 
     // 3. Run the query
-    $success = $statement->execute();
+    $success = $statement->execute(
+      [$clientId]
+    );
 
     // 4. Handle the results
     $arr = [];

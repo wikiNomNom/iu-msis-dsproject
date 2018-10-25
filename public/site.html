@@ -49,6 +49,25 @@
             </tr>
           </tbody>
         </table>
+
+        <h3>Notes on client account</h3>
+        <table class="table">
+
+          <thead class="text-success">
+            <tr>
+              <th scope="col">Note #</th>
+              <th scope="col">Client #</th>
+              <th scope="col">Comment</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="s in sites">
+              <td>{{ s.noteId }}</td>
+              <td>{{ s.clientId }}</td>
+              <td>{{ s.noteDescription }}</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
 
     <div class="footer container-fluid">

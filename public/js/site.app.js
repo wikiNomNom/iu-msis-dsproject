@@ -21,6 +21,17 @@ var siteApp = new Vue ({
         }) ;//end of catch
       },//end of fetchSite
 
+      fetchNote : function(cId){
+        fetch('api/note.php?clientId='+cId)
+        .then( function(response) {return response.json()} )
+        .then( json => {this.sites = json} )
+
+        .catch(function(err){
+          console.log('COMMENT FETCH ERROR:');
+          console.log(err);
+          }) ;//end of catch
+      },//fetchNote ends
+
     gotoTurbine(siteId) {
       //TODO change turbine page to site page
       window.location = 'turbine.html?siteId=' + siteId;
@@ -34,5 +45,6 @@ var siteApp = new Vue ({
         const clientId = url.searchParams.get('clientId');
         console.log("At created"+clientId);
         this.fetchSite(clientId);
+        this.fetchNote(clientId);
     }//created closed
 });
