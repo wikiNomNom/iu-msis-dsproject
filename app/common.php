@@ -21,3 +21,4 @@ require 'models/SensorDeployed.php';
 require 'models/SensorTimeSeries.php';
 require 'models/Note.php';
 require 'models/TurbineDisplay.php';
+require 'models/SensorDisplay.php';
