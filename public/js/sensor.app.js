@@ -13,7 +13,7 @@ var sensorApp = new Vue ({
 
       fetch('api/sensorDisplay.php?turbineId='+tId)
       .then( function(response) {return response.json()} )
-      .then( json => {sensorApp.sensor = json} )
+      .then( json => {sensorApp.sensors = json} )
 
       .catch(function(err){
         console.log('COMMENT FETCH ERROR:');
