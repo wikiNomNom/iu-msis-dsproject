@@ -34,7 +34,7 @@ class SensorKpi{
     $db = new PDO(DB_SERVER, DB_USER, DB_PW);
 
     // 2. Prepare the query
-    $sql = 'SELECT * FROM sensorTimeSeries as st, sensorDeployed as sd, turbineDeployed as td WHERE st.sensorDeployedId = sd.sensorDeployedId AND sd.turbineDeployedId = td.turbineDeployedId AND sd.turbineDeployedId = 1;';
+    $sql = 'SELECT * FROM sensorTimeSeries as st, sensorDeployed as sd, turbineDeployed as td WHERE st.sensorDeployedId = sd.sensorDeployedId AND sd.turbineDeployedId = td.turbineDeployedId AND sd.turbineDeployedId = ?;';
 
     $statement = $db->prepare($sql);
 
