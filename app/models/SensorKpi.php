@@ -1,6 +1,6 @@
 <?php
- 
-class SensorKPI{
+
+class SensorKpi{
 
   public $sensorDeployedId;
   public $dataCollectedDate;
@@ -47,7 +47,7 @@ class SensorKPI{
     $arr = [];
     while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
       // 4.a. For each row, make a new work object
-      $sensorKpiItem =  new SensorKPI($row);
+      $sensorKpiItem =  new SensorKpi($row);
 
       array_push($arr, $sensorKpiItem);
     }
