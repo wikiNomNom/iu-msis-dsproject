@@ -11,7 +11,7 @@ var chartsApp = new Vue ({
 
     fetchChart : function (tId){
 
-      fetch('api/sensorKPI.php?turbineId='+tId)
+      fetch('api/sensorKpi.php?turbineId='+tId)
       .then( function(response) {return response.json()} )
       .then( json => {
         chartsApp.charts = json;
