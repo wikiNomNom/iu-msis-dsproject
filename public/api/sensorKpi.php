@@ -1,5 +1,6 @@
 <?php
 
+ 
 require '../../app/common.php';
 
 $turbineId = intval($_GET['turbineId'] ?? 0);
