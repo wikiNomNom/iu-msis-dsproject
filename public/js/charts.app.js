@@ -29,7 +29,7 @@ var chartsApp = new Vue ({
 
 
     formatChartTime: function (){
-      this.sensorTime.forEach(
+      this.charts.forEach(
       (entry, index, arr) => {
         entry.dateCollected = Date.parse(entry.dataCollectedDate);
         entry.output = Number(entry.output);
