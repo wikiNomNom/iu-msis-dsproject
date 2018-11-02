@@ -163,7 +163,118 @@ var chartsApp = new Vue ({
           }]
       });
 
-    }//heatRateChart ends
+    },//heatRateChart ends
+
+    CompressorEfficiencyChart() {
+      Highcharts.chart('compChart', {
+            chart: {
+                zoomType: 'x'
+            },
+            title: {
+                text: 'Compressor Efficiency'
+            },
+            xAxis: {
+                type: 'datetime'
+            },
+            yAxis: {
+                title: {
+                    text: 'Compressor Efficiency'
+                }
+            },
+            legend: {
+                enabled: false
+            },
+            plotOptions: {
+                area: {
+                    fillColor: {
+                        linearGradient: {
+                            x1: 0,
+                            y1: 0,
+                            x2: 0,
+                            y2: 1
+                        },
+                        stops: [
+                            [0, '#801515'],
+                            [1, '#FAAAA']
+                        ]
+                    },
+                    marker: {
+                        radius: 2
+                    },
+                    lineWidth: 1,
+                    states: {
+                        hover: {
+                            lineWidth: 1
+                        }
+                    },
+                    threshold: null
+                }
+            },
+            series: [{
+                type: 'area',
+                name: 'Compressor Efficiency',
+                data: chartsApp.charts.map( entry=>
+                  [entry.dateCollected, entry.compressorEfficiency]
+                )
+            }]
+        });
+    },
+
+    AvailabilityChart() {
+      Highcharts.chart('availabilityChart', {
+            chart: {
+                zoomType: 'x'
+            },
+            title: {
+                text: 'Availability'
+            },
+            xAxis: {
+                type: 'datetime'
+            },
+            yAxis: {
+                title: {
+                    text: 'Availability'
+                }
+            },
+            legend: {
+                enabled: false
+            },
+            plotOptions: {
+                area: {
+                    fillColor: {
+                        linearGradient: {
+                            x1: 0,
+                            y1: 0,
+                            x2: 0,
+                            y2: 1
+                        },
+                        stops: [
+                            [0, '#c06c84'],
+                            [1, '#f67280']
+                        ]
+                    },
+                    marker: {
+                        radius: 2
+                    },
+                    lineWidth: 1,
+                    states: {
+                        hover: {
+                            lineWidth: 1
+                        }
+                    },
+                    threshold: null
+                }
+            },
+            series: [{
+                type: 'area',
+                name: 'Availability',
+                data: chartsApp.charts.map( entry=>
+                  [entry.dateCollected, entry.availability]
+                )
+            }]
+        });
+    }
+
 
     },//methods closed
 
