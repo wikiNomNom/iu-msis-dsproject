@@ -22,6 +22,7 @@ var chartsApp = new Vue ({
         chartsApp.availabilityChart();
         chartsApp.reliabilityChart();
         chartsApp.firedHourChart();
+        chartsApp.trips();
       } )
 
       .catch(function(err){
