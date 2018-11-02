@@ -395,7 +395,7 @@ var chartsApp = new Vue ({
 
             title: {
 
-                text: 'Fixed Hour'
+                text: 'Fired Hours'
 
             },
 
