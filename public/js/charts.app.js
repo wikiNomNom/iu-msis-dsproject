@@ -43,7 +43,7 @@ var chartsApp = new Vue ({
       }
     )
 
-  },
+  }, //formatChartTime ends
 
     outputChart: function() {
       Highcharts.chart('outputChart', {
@@ -100,7 +100,70 @@ var chartsApp = new Vue ({
             }]
         });
 
-    }
+    },//outputChart ends
+
+    heatRateChart: function(){
+        Highcharts.chart('heatRateChart', {
+          chart: {
+              type: 'scatter',
+              zoomType: 'xy'
+          },
+          title: {
+              text: 'Heat Rate'
+          },
+          xAxis: {
+              title: {
+                  enabled: true
+              },
+              startOnTick: true,
+              endOnTick: true,
+              showLastLabel: true
+          },
+          yAxis: {
+              title: {
+                  text: 'Heat Rate'
+              }
+          },
+          legend: {
+              layout: 'vertical',
+              align: 'left',
+              verticalAlign: 'top',
+              x: 100,
+              y: 70,
+              floating: true,
+              backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF',
+              borderWidth: 1
+          },
+          plotOptions: {
+              scatter: {
+                  marker: {
+                      radius: 5,
+                      states: {
+                          hover: {
+                              enabled: true,
+                              lineColor: 'rgb(100,100,100)'
+                          }
+                      }
+                  },
+                  states: {
+                      hover: {
+                          marker: {
+                              enabled: false
+                          }
+                      }
+                  }
+              }
+          },
+          series: [{
+              name: 'Heat Rate',
+              color: 'rgba(223, 83, 83, .5)',
+              data: chartsApp.charts.map( entry=>
+                [entry.dateCollected, entry.heatRate]
+              )
+          }]
+      });
+
+    }//heatRateChart ends
 
     },//methods closed
 
