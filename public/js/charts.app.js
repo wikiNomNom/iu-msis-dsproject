@@ -491,6 +491,290 @@ var chartsApp = new Vue ({
 
     },
 
+    ReliabilityChart() {
+
+      Highcharts.chart('reliabilityChart', {
+
+            chart: {
+
+                zoomType: 'x'
+
+            },
+
+            title: {
+
+                text: 'Reliability'
+
+            },
+
+            xAxis: {
+
+                type: 'datetime'
+
+            },
+
+            yAxis: {
+
+                title: {
+
+                    text: 'Reliability'
+
+                }
+
+            },
+
+            legend: {
+
+                enabled: false
+
+            },
+
+            plotOptions: {
+
+                area: {
+
+                    fillColor: {
+
+                        linearGradient: {
+
+                            x1: 0,
+
+                            y1: 0,
+
+                            x2: 0,
+
+                            y2: 1
+
+                        },
+
+                        stops: [
+
+                            [0,'#f8b195'],
+
+                            [1, '#f67280']
+
+                        ]
+
+                    },
+
+                    marker: {
+
+                        radius: 2
+
+                    },
+
+                    lineWidth: 1,
+
+                    states: {
+
+                        hover: {
+
+                            lineWidth: 1
+
+                        }
+
+                    },
+
+                    threshold: null
+
+                }
+
+            },
+
+            series: [{
+
+                type: 'area',
+
+                name: 'Reliability',
+
+                data: kpiApp.sensorTime.map( entry=>
+
+                  [entry.dateCollected, entry.reliability]
+
+                )
+
+            }]
+
+        });
+
+    },
+
+buildFixedHourChart() {
+
+      Highcharts.chart('fixedHoursChart', {
+
+            chart: {
+
+                zoomType: 'x'
+
+            },
+
+            title: {
+
+                text: 'Fixed Hour'
+
+            },
+
+            xAxis: {
+
+                type: 'datetime'
+
+            },
+
+            yAxis: {
+
+                title: {
+
+                    text: 'Fixed Hour'
+
+                }
+
+            },
+
+            legend: {
+
+                enabled: false
+
+            },
+
+            plotOptions: {
+
+                area: {
+
+                    fillColor: {
+
+                        linearGradient: {
+
+                            x1: 0,
+
+                            y1: 0,
+
+                            x2: 0,
+
+                            y2: 1
+
+                        },
+
+                        stops: [
+
+                            [0, '#79bd8f'],
+
+                            [1, '#c3c2f2']
+
+                        ]
+
+                    },
+
+                    marker: {
+
+                        radius: 2
+
+                    },
+
+                    lineWidth: 1,
+
+                    states: {
+
+                        hover: {
+
+                            lineWidth: 1
+
+                        }
+
+                    },
+
+                    threshold: null
+
+                }
+
+            },
+
+            series: [{
+
+                type: 'area',
+
+                name: 'Fixed Hour',
+
+                data: kpiApp.sensorTime.map( entry=>
+
+                  [entry.dateCollected, entry.fixedHours]
+
+                )
+
+            }]
+
+        });
+
+    },
+
+    trips: function() {
+
+      Highcharts.chart('trips', {
+
+            chart: {
+
+                zoomType: 'x'
+
+            },
+
+            title: {
+
+                text: 'Trips'
+
+            },
+
+            xAxis: {
+
+                type: 'datetime'
+
+            },
+
+            yAxis: {
+
+                title: {
+
+                    text: 'Trips'
+
+                }
+
+            },
+
+            legend: {
+
+                enabled: false
+
+            },
+
+            plotOptions: {
+
+              column: {
+
+               pointPadding: 0.4,
+
+               borderWidth: 0
+
+           }
+
+            },
+
+            series: [{
+
+                type: 'area',
+
+                name: 'Trips',
+
+                data: chartsApp.charts.map( entry=>
+
+                  [entry.dateCollected, entry.trips]
+
+                )
+
+            }]
+
+        });
+
+    }​
+
 
 
     },//methods closed
