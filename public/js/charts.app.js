@@ -274,7 +274,39 @@ var chartsApp = new Vue ({
                 )
             }]
         });
-    }
+    },
+
+    reliabilityChart() {
+
+      Highcharts.chart('reliabilityChart', {
+
+            chart: {
+
+                zoomType: 'x'
+
+            },
+
+            title: {
+
+                text: 'Reliability'
+
+            },
+
+            xAxis: {
+
+                type: 'datetime'
+
+            },
+
+            yAxis: {
+
+                title: {
+
+                    text: 'Reliability'
+
+                }
+
+            },
 
 
     },//methods closed
