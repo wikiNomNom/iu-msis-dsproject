@@ -479,7 +479,7 @@ var chartsApp = new Vue ({
 
                 name: 'Fired Hours',
 
-                data: chartsApp,charts.map( entry=>
+                data: chartsApp.charts.map( entry=>
 
                   [entry.dateCollected, entry.firedHours]
 
