@@ -21,6 +21,7 @@ var chartsApp = new Vue ({
         chartsApp.compressorEfficiencyChart();
         chartsApp.availabilityChart();
         chartsApp.reliabilityChart();
+        chartsApp.firedHourChart();
       } )
 
       .catch(function(err){
@@ -39,7 +40,7 @@ var chartsApp = new Vue ({
         entry.compressorEfficiency = Number(entry.compressorEfficiency);
         entry.availability = Number(entry.availability);
         entry.reliability = Number(entry.reliability);
-        entry.fixedHours = Number(entry.firedHours);
+        entry.firedHours = Number(entry.firedHours);
         entry.trips = Number(entry.trips);
         entry.starts = Number(entry.starts);
       }
@@ -277,7 +278,7 @@ var chartsApp = new Vue ({
         });
     },
 
-    reliabilityChart() {
+    reliabilityChart: function() {
 
       Highcharts.chart('reliabilityChart', {
 
@@ -380,7 +381,115 @@ var chartsApp = new Vue ({
 
         });
 
-    }
+    },
+
+    firedHourChart: function() {
+
+      Highcharts.chart('firedHours', {
+
+            chart: {
+
+                zoomType: 'x'
+
+            },
+
+            title: {
+
+                text: 'Fixed Hour'
+
+            },
+
+            xAxis: {
+
+                type: 'datetime'
+
+            },
+
+            yAxis: {
+
+                title: {
+
+                    text: 'Fixed Hour'
+
+                }
+
+            },
+
+            legend: {
+
+                enabled: false
+
+            },
+
+            plotOptions: {
+
+                area: {
+
+                    fillColor: {
+
+                        linearGradient: {
+
+                            x1: 0,
+
+                            y1: 0,
+
+                            x2: 0,
+
+                            y2: 1
+
+                        },
+
+                        stops: [
+
+                            [0, '#FAFF70'],
+
+                            [1, '#E3C16F']
+
+                        ]
+
+                    },
+
+                    marker: {
+
+                        radius: 1.5
+
+                    },
+
+                    lineWidth: 1,
+
+                    states: {
+
+                        hover: {
+
+                            lineWidth: 1
+
+                        }
+
+                    },
+
+                    threshold: null
+
+                }
+
+            },
+
+            series: [{
+
+                type: 'area',
+
+                name: 'Fired Hours',
+
+                data: chartsApp,charts.map( entry=>
+
+                  [entry.dateCollected, entry.firedHours]
+
+                )
+
+            }]
+
+        });
+
+    },
 
 
 
