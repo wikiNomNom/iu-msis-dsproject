@@ -363,6 +363,24 @@ var chartsApp = new Vue ({
                 }
 
             },
+            series: [{
+
+                type: 'area',
+
+                name: 'Reliability',
+
+                data: chartsApp.charts.map( entry=>
+
+                  [entry.dateCollected, entry.reliability]
+
+                )
+
+            }]
+
+        });
+
+    }
+
 
 
     },//methods closed
