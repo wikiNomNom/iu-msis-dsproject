@@ -158,7 +158,7 @@ var chartsApp = new Vue ({
               name: 'Heat Rate',
               color: 'rgba(223, 83, 83, .5)',
               data: chartsApp.charts.map( entry=>
-                [entry.output, entry.heatRate]
+                [entry.dateCollected, entry.heatRate]
               )
           }]
       });
