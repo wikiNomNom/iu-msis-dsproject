@@ -29,7 +29,7 @@ class SensorKpi{
     $this->starts = intval($row['starts']);
   }
 
-  public static function getSensorKpiByTurbineId($turbineId) {
+  public static function getSensorKpiBySensorId($sensorId) {
     // 1. Connect to the database
     $db = new PDO(DB_SERVER, DB_USER, DB_PW);
 
