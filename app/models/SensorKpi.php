@@ -34,13 +34,13 @@ class SensorKpi{
     $db = new PDO(DB_SERVER, DB_USER, DB_PW);
 
     // 2. Prepare the query
-    $sql = 'SELECT * FROM sensorTimeSeries as st, sensorDeployed as sd, turbineDeployed as td WHERE st.sensorDeployedId = sd.sensorDeployedId AND sd.turbineDeployedId = td.turbineDeployedId AND sd.turbineDeployedId = ?;';
+    $sql = 'SELECT * FROM sensorTimeSeries as st, sensorDeployed as sd where sd.sensorDeployedId = st.sensorDeployedId and st.sensorDeployedId=?;';
 
     $statement = $db->prepare($sql);
 
     // 3. Run the query
     $success = $statement->execute(
-      [$turbineId]
+      [$sensorId]
     );
 
     // 4. Handle the results
