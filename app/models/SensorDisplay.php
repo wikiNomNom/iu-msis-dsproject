@@ -13,7 +13,7 @@ class SensorDisplay{
   // public $lastUnplannedOutageDate;
 
   public function __construct($row) {
-    $this->sensorId = intval($row['sensorId']);
+    $this->sensorId = intval($row['sensorDeployedId']);
     $this->sensorName = $row['sensorName'];
     $this->sensorDescription = $row['sensorDescription'];
 
@@ -33,7 +33,7 @@ class SensorDisplay{
     $db = new PDO(DB_SERVER, DB_USER, DB_PW);
 
     // 2. Prepare the query
-    $sql = 'SELECT sd.sensorId as sensorId, s.sensorName, s.sensorDescription, sd.serialNumber, sd.deployedDate from sensor as s, sensorDeployed as sd where (s.sensorId = sd.sensorId) AND (sd.turbineDeployedId = ?);';
+    $sql = 'SELECT sd.sensorDeployedId as sensorId, s.sensorName, s.sensorDescription, sd.serialNumber, sd.deployedDate from sensor as s, sensorDeployed as sd where (s.sensorId = sd.sensorId) AND (sd.turbineDeployedId = ?);';
 
     $statement = $db->prepare($sql);
 
