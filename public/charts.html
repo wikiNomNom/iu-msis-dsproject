@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <title>Turbine Management Portal | Sensor Charts View</title>
+  </head>
+
+  <body>
+    <div class="container-fluid">
+
+      <header>
+        <div class="row">
+          <img src="./img/ags_logo.png" style="display: inline;">
+    			<h1 style="display: inline;">Turbine Management Portal</h1>
+        </div>
+  		</header>
+
+      <div class="container" id="sensorData">
+        <h2> Sensor Data </h2>
+
+        <div class="chart" id="chartData">
+          Performance Charts
+
+          <div>
+            <div class="row">
+              <div id="outputChart" class="col-md-12"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- <div class="afterChart" v-for="sn in sensors">
+          <div>
+            <ul class="list-group">
+              <li class="list-group-item">Sensor #: {{ sn.sensorId }}</li>
+              <li class="list-group-item">Sensor Name: {{ sn.sensorName }}</li>
+              <li class="list-group-item">Serial #: {{ sn.serialNumber }}</li>
+              <li class="list-group-item">Deployed Date: {{ sn.deployedDate }} </li>
+              <li class="list-group-item">Sensor Description: {{ sn.sensorDescription }}</li>
+            </ul>
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Sensor Charts</h5>
+                <p class="card-text">See key charts from the sensors</p>
+                <button class="btn btn-primary" :key="sn.sensorId" @click="gotoSensorKpi(sn.sensorId)">Charts page</button>
+            </div>
+          </div>
+        </div> -->
+
+      </div>
+
+
+
+    <div class="footer container-fluid">
+      <span>Alternative Green Systems</span>
+    </div>
+
+    </div>
+    <!-- include javascript files-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="js/sensor.app.js"></script>
+    <script src="js/charts.app.js"></script>
+
+  </body>
+</html>
