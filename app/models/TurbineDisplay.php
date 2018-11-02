@@ -42,7 +42,7 @@ class TurbineDisplay{
     $db = new PDO(DB_SERVER, DB_USER, DB_PW);
 
     // 2. Prepare the query
-    $sql = 'SELECT td.turbineId as turbineId, t.turbineName as turbineName, t.turbineDescription as turbineDescription, td.siteId as siteId, t.capacity as capacity, t.rampUpTime as rampUpTime, t.maintenanceInterval as maintenanceInterval, td.serialNumber as serialNumber, td.deployedDate as deployedDate, td.totalFiredHours as totalFiredHours, td.totalStarts as totalStarts, td.lastPlannedOutageDate as lastPlannedOutageDate, td.lastUnplannedOutageDate as lastUnplannedOutageDate from turbine as t, turbineDeployed as td where (t.turbineId = td.turbineId) AND (td.siteId = ?);';
+    $sql = 'SELECT td.turbineDeployedId as turbineId, t.turbineName as turbineName, t.turbineDescription as turbineDescription, td.siteId as siteId, t.capacity as capacity, t.rampUpTime as rampUpTime, t.maintenanceInterval as maintenanceInterval, td.serialNumber as serialNumber, td.deployedDate as deployedDate, td.totalFiredHours as totalFiredHours, td.totalStarts as totalStarts, td.lastPlannedOutageDate as lastPlannedOutageDate, td.lastUnplannedOutageDate as lastUnplannedOutageDate from turbine as t, turbineDeployed as td where (t.turbineId = td.turbineId) AND (td.siteId = ?);';
 
     #echo $sql;
 
@@ -53,7 +53,7 @@ class TurbineDisplay{
       [$siteId]
     );
 
-    
+
     // 4. Handle the results
     $arr = [];
     while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
