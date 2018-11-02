@@ -44,18 +44,14 @@
               <li class="list-group-item">Serial #: {{ sn.serialNumber }}</li>
               <li class="list-group-item">Deployed Date: {{ sn.deployedDate }} </li>
               <li class="list-group-item">Sensor Description: {{ sn.sensorDescription }}</li>
-              <!-- <li class="list-group-item">Total Fired Hours: {{ t.totalFiredHours }}</li>
-              <li class="list-group-item">Last Planned Outage: {{ t.lastPlannedOutageDate }} </li>
-              <li class="list-group-item">Last Unplanned Outage: {{ t.lastUnplannedOutageDate }}</li> -->
             </ul>
-          </div>
-            <!-- <div class="card" v-for="t in turbines">
+            <div class="card">
               <div class="card-body">
-                <h5 class="card-title">Turbine KPIs</h5>
-                <p class="card-text">See data from the sensors attached to the turbine</p>
-                <a href="/sensor.html" class="btn btn-primary" :key="t.turbineId" @click="gotoSensor(t.turbineId)">Go to KPIs</a>
-            </div> -->
-          <!-- </div> -->
+                <h5 class="card-title">Sensor KPIs</h5>
+                <p class="card-text">See key charts from the sensors</p>
+                <button class="btn btn-primary" :key="sn.sensorId" @click="gotoSensorKpi(sn.sensorId)">Go to KPIs</button>
+            </div>
+          </div>
         </div>
 
       </div>
