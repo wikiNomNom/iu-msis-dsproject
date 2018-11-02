@@ -20,6 +20,7 @@ var chartsApp = new Vue ({
         chartsApp.heatRateChart();
         chartsApp.compressorEfficiencyChart();
         chartsApp.availabilityChart();
+        chartsApp.reliabilityChart();
       } )
 
       .catch(function(err){
