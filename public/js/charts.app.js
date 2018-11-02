@@ -493,73 +493,39 @@ var chartsApp = new Vue ({
     },
 
     trips: function() {
-
       Highcharts.chart('trips', {
-
             chart: {
-
                 zoomType: 'x'
-
             },
-
             title: {
-
                 text: 'Trips'
-
             },
-
             xAxis: {
-
                 type: 'datetime'
-
             },
-
             yAxis: {
-
                 title: {
-
                     text: 'Trips'
-
                 }
-
             },
-
             legend: {
-
                 enabled: false
-
             },
-
             plotOptions: {
-
               column: {
-
-               pointPadding: 0.4,
-
+               pointPadding: 0.2,
                borderWidth: 0
-
            }
-
             },
-
             series: [{
-
                 type: 'area',
-
                 name: 'Trips',
-
                 data: chartsApp.charts.map( entry=>
-
                   [entry.dateCollected, entry.trips]
-
                 )
-
             }]
-
         });
-
-    }​
-
+    }
 
 
     },//methods closed
