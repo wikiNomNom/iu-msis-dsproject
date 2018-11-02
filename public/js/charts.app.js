@@ -19,6 +19,7 @@ var chartsApp = new Vue ({
         chartsApp.outputChart();
         chartsApp.heatRateChart();
         chartsApp.compressorEfficiencyChart();
+        chartsApp.availabilityChart();
       } )
 
       .catch(function(err){
@@ -165,7 +166,7 @@ var chartsApp = new Vue ({
 
     },//heatRateChart ends
 
-    CompressorEfficiencyChart() {
+    compressorEfficiencyChart: function() {
       Highcharts.chart('compChart', {
             chart: {
                 zoomType: 'x'
@@ -220,8 +221,8 @@ var chartsApp = new Vue ({
         });
     },
 
-    AvailabilityChart() {
-      Highcharts.chart('availabilityChart', {
+    availabilityChart: function() {
+      Highcharts.chart('avbChart', {
             chart: {
                 zoomType: 'x'
             },
