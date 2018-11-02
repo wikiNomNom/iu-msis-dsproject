@@ -22,7 +22,7 @@ var sensorApp = new Vue ({
       },//end of fetchClient
 
     gotoSensorKpi(sensorId) {
-       window.location = 'sensorKpi.html?sensorId=' + sensorId;
+       window.location = 'charts.html?sensorId=' + sensorId;
      }
 
     },//methods closed
