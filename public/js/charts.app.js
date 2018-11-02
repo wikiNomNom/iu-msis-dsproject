@@ -93,7 +93,7 @@ var chartsApp = new Vue ({
             },
             series: [{
                 type: 'area',
-                name: 'Trips',
+                name: 'Output',
                 data: chartsApp.charts.map( entry=>
                   [entry.dateCollected, entry.output]
                 )
