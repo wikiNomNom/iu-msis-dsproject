@@ -18,7 +18,7 @@ var chartsApp = new Vue ({
         chartsApp.formatChartTime();
         chartsApp.outputChart();
         chartsApp.heatRateChart();
-        // chartsApp.compressorEfficiencyChart();
+        chartsApp.compressorEfficiencyChart();
       } )
 
       .catch(function(err){
