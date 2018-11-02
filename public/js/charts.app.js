@@ -108,6 +108,6 @@ var chartsApp = new Vue ({
         //TODO get parameters from url
         const url = new URL(window.location.href);
         const sensorId = url.searchParams.get('sensorId');
-        this.fetchChart(turbineId);
+        this.fetchChart(sensorId);
     }//created closed
 });
