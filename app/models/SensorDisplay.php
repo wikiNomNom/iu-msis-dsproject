@@ -13,7 +13,7 @@ class SensorDisplay{
   // public $lastUnplannedOutageDate;
 
   public function __construct($row) {
-    $this->sensorId = intval($row['sensorDeployedId']);
+    $this->sensorId = intval($row['sensorId']);
     $this->sensorName = $row['sensorName'];
     $this->sensorDescription = $row['sensorDescription'];
 
