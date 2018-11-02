@@ -19,11 +19,11 @@ var sensorApp = new Vue ({
         console.log('COMMENT FETCH ERROR:');
         console.log(err);
         }) ;//end of catch
-      }//end of fetchClient
+      },//end of fetchClient
 
-    // gotoSensor(turbineId) {
-    //    window.location = 'sensor.html?turbineId=' + turbineId;
-    //  }
+    gotoSensorKpi(sensorId) {
+       window.location = 'sensorKpi.html?sensorId=' + sensorId;
+     }
 
     },//methods closed
 
