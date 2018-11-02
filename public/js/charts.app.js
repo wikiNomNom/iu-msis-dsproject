@@ -9,9 +9,9 @@ var chartsApp = new Vue ({
 
   methods: {
 
-    fetchChart : function (tId){
+    fetchChart : function (sId){
 
-      fetch('api/sensorKpi.php?turbineId='+tId)
+      fetch('api/sensorKpi.php?sensorId='+sId)
       .then( function(response) {return response.json()} )
       .then( json => {
         chartsApp.charts = json;
@@ -107,7 +107,7 @@ var chartsApp = new Vue ({
     created() {
         //TODO get parameters from url
         const url = new URL(window.location.href);
-        const turbineId = url.searchParams.get('turbineId');
+        const sensorId = url.searchParams.get('sensorId');
         this.fetchChart(turbineId);
     }//created closed
 });
