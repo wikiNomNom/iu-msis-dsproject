@@ -333,13 +333,36 @@ var chartsApp = new Vue ({
 
                         stops: [
 
-                            [0,'#f8b195'],
+                            [0,'#7284A8'],
 
-                            [1, '#f67280']
+                            [1, '#A9B3CE']
 
                         ]
 
                     },
+                     marker: {
+
+                        radius: 2
+
+                    },
+
+                    lineWidth: 1,
+
+                    states: {
+
+                        hover: {
+
+                            lineWidth: 1
+
+                        }
+
+                    },
+
+                    threshold: null
+
+                }
+
+            },
 
 
     },//methods closed
