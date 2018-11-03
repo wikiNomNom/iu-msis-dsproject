@@ -39,6 +39,10 @@ nav{
 	text-align: center;
 }
 
+td{
+	cursor: pointer;
+}
+
 .loginForm{
 	margin-top: 30px;
 	margin-bottom: 20px;
