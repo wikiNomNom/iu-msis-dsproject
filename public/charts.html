@@ -14,20 +14,23 @@
   </head>
 
   <body>
-    <div class="container-fluid">
+    <div>
 
       <header>
-        <div class="row">
+        <div class="jumbotron">
           <img src="./img/ags_logo.png" style="display: inline;">
     			<h1 style="display: inline;">Turbine Management Portal</h1>
         </div>
   		</header>
+      <div class="container">
+        <h3>
+          Charts
+        </h3>
+      </div>
 
       <div class="container" id="sensorData">
-        <h2> Sensor Data </h2>
 
         <div class="chart" id="chartData">
-          Performance Charts
 
           <div>
             <div class="row">
@@ -53,24 +56,6 @@
             </div>
           </div>
         </div>
-
-        <!-- <div class="afterChart" v-for="sn in sensors">
-          <div>
-            <ul class="list-group">
-              <li class="list-group-item">Sensor #: {{ sn.sensorId }}</li>
-              <li class="list-group-item">Sensor Name: {{ sn.sensorName }}</li>
-              <li class="list-group-item">Serial #: {{ sn.serialNumber }}</li>
-              <li class="list-group-item">Deployed Date: {{ sn.deployedDate }} </li>
-              <li class="list-group-item">Sensor Description: {{ sn.sensorDescription }}</li>
-            </ul>
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">Sensor Charts</h5>
-                <p class="card-text">See key charts from the sensors</p>
-                <button class="btn btn-primary" :key="sn.sensorId" @click="gotoSensorKpi(sn.sensorId)">Charts page</button>
-            </div>
-          </div>
-        </div> -->
 
       </div>
 

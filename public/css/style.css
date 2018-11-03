@@ -6,9 +6,12 @@ body{
 		font-family: "Helvetica", sans-serif;
 	}
 
+	.jumbotron{
+		background-color: #C5D1EB;
+	}
+
 header{
-  padding-top: 15px;
-  background-color: #D5D6D8;
+  background-color: #C5D1EB;
   width: 100%;
 }
 
@@ -28,12 +31,12 @@ nav{
 }
 
 .footer{
-  background-color: #D5D6D8;
-  margin-left: 0px
-  margin-right: 0px;
+  background-color: #C5D1EB;
+  padding: 8px 0px;
   width: 100;
 
-  margin-top: 180px;
+  margin-top: 150px;
+	text-align: center;
 }
 
 .loginForm{
