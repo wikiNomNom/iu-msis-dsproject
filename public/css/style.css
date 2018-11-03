@@ -6,6 +6,11 @@ body{
 		font-family: "Helvetica", sans-serif;
 	}
 
+	a:link{
+		text-decoration: none;
+		color: black;
+	}
+
 	.jumbotron{
 		background-color: #C5D1EB;
 	}
