@@ -78,8 +78,7 @@ var chartsApp = new Vue ({
                             y2: 1
                         },
                         stops: [
-                          //TODO change chart color
-                            [0, "#2d9d47"],
+                            [0, "#63E2C6"],
                             [1, "#006440"]
                         ]
                     },
